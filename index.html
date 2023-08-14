@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <style>
+        #bars{
+            background-image: url('./imgs/bars.png');
+            background-repeat: repeat-x;
+            background-size: 500px;
+
+        }
+
+        #flappyBird{
+            transition:top 0.2s ease-in;
+        }
+
+        #imageContainer{
+            transition:all 0.4s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 style="text-align: center;">Flappy Bird Game...</h1>
+        <div  class="container" style="display: flex;justify-content: center">
+            <div style="width: 800px;height:560px;background-color: aquamarine;display: flex;justify-content: space-evenly;overflow-x: scroll;gap: 170px;" id="imageContainer">
+                <img src="./imgs/bird.png" id="flappyBird" style="position: fixed;top:100px;" width="40" height="30" alt="bird" id="flappyBird">
+
+                <div style="display: grid;">
+                    <img style="place-self: start;height: 180px;width: 30px;" src="./imgs/pipe.png" alt="">
+                    <img style="place-self: end;height: 180px;width: 30px" src="./imgs/pipe.png"  alt="">
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex;justify-content: center; margin-top: 10px;gap: 10px;">
+            <button id="startBtn" style="width: 100px;height: 30px;background-color: transparent;outline: none;color: black;border: 2px solid gray;cursor: pointer;;border-radius: 10px;">Start</button>
+            <button id="resetBtn" style="width: 100px;height: 30px;background-color: transparent;outline: none;color: black;border: 2px solid gray;cursor: pointer;;border-radius: 10px;">Reset</button>
+        </div>
+    </section>
+
+    <script src="./dest/index.js"></script>
+</body>
+</html>
